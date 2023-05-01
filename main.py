@@ -37,4 +37,7 @@ async def start_message(bot, message):
 async def help(bot: Bot, message: Message):
     await message.reply_text("help✅")
 
+
+print("Bot_Started")
+
 Bot.run()
