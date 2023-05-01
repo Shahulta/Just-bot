@@ -15,7 +15,11 @@ async def start_message(bot, message):
     await message.reply_text(
         text="hi bro sugam aano?",
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("Button", url="https://t.me/New_Mallu_Movies_2")
+            InlineKeyboardButton("Group", url="https://t.me/New_Mallu_Movies_2"),
+            InlineKeyboardButton("Channel", url="https://t.me/+GV8HnJAzx_hhNmE1")
+            ],[
+            InlineKeyboardButton("Help", url="@shanibsanu_bot"),
+            InlineKeyboardButton("Owner", url="@Shanib_c_k")
             ]]
             )
         )
