@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-
+from pyrogram.types import Message
 
 
 Bot=Client(
@@ -13,6 +13,8 @@ Bot=Client(
 @Bot.on_message(filters.command("start"))
 async def start_message(bot, message):
     await message.reply_text("hi bro sugam aano?")
-
+@Bot.on_message(filters.command("help"))
+async def help(bot: Bot, message: Message):
+    await message.reply_text("help✅")
 
 Bot.run()
