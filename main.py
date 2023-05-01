@@ -12,7 +12,7 @@ Bot=Client(
 
 @Bot.on_message(filters.command("start"))
 async def start_message(bot, message):
-    await message.reply_text("hi")
+    await message.reply_text("hi bro sugam aano?")
 
 
 Bot.run()
