@@ -9,12 +9,17 @@ Bot=Client(
     api_hash="baa838bcf579f71dbcd5ef2ab9ca8f2b"
 )
 
+START_MESSAGE = """
+Hello {}
+"""
 
 @Bot.on_message(filters.command("start"))
 async def start_message(bot, message):
+
+
     await message.reply_photo(
         photo="https://telegra.ph/file/5febb89f64baf2c08cc6d.jpg",
-        caption="hi bro sugam aano?",
+        caption=START_MESSAGE.format(message.from_user.mention)
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Group", url="https://t.me/New_Mallu_Movies_2"),
             InlineKeyboardButton("Channel", url="https://t.me/+GV8HnJAzx_hhNmE1")
