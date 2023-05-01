@@ -10,17 +10,10 @@ Bot=Client(
 )
 
 
-ALL_PHOTOS = [
- "https://telegra.ph/file/99f483c7fb9d813a37c0b.jpg",
- "https://telegra.ph/file/7cbf1ce73f70740bd0af6.jpg",
- "https://telegra.ph/file/5febb89f64baf2c08cc6d.jpg"
-]
-
-
 @Bot.on_message(filters.command("start"))
 async def start_message(bot, message):
     await message.reply_photo(
-        photo=random.choice(ALL_PHOTOS),
+        photo="https://telegra.ph/file/5febb89f64baf2c08cc6d.jpg",
         caption="hi bro sugam aano?",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Group", url="https://t.me/New_Mallu_Movies_2"),
