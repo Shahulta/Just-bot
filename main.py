@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-
+from pyrogram.types import CallbackQuery
 
 Bot=Client(
     "Pyrogram_bot",
@@ -24,7 +24,7 @@ async def start_message(bot, message):
             InlineKeyboardButton("Group", url="https://t.me/New_Mallu_Movies_2"),
             InlineKeyboardButton("Channel", url="https://t.me/+GV8HnJAzx_hhNmE1")
             ],[
-            InlineKeyboardButton("Help", url="@shanibsanu_bot"),
+            InlineKeyboardButton("Help", url="https://t.me/Shanib_c_k")
             ]]
             )
         )
