@@ -3,7 +3,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 import random
 
 Bot=Client(
-    "Pyrogram_bot"
+    "Pyrogram_bot",
     bot_token="6004112610:AAF8AMEnrDIlQDDUu68PFrjApLu9UzfYmCU",
     api_id="17296819",
     api_hash="baa838bcf579f71dbcd5ef2ab9ca8f2b"
@@ -20,7 +20,7 @@ ALL_PHOTOS = [
 @Bot.on_message(filters.command("start"))
 async def start_message(bot, message):
     await message.reply_photo(
-        photo=random.choice(ALL_PHOTOS)
+        photo=random.choice(ALL_PHOTOS),
         caption="hi bro sugam aano?",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Group", url="https://t.me/New_Mallu_Movies_2"),
