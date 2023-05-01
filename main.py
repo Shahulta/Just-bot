@@ -20,7 +20,6 @@ async def start_message(bot, message):
             InlineKeyboardButton("Channel", url="https://t.me/+GV8HnJAzx_hhNmE1")
             ],[
             InlineKeyboardButton("Help", url="@shanibsanu_bot"),
-            InlineKeyboardButton("Owner", url="@Shanib_c_k")
             ]]
             )
         )
