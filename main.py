@@ -9,31 +9,41 @@ Bot=Client(
     api_hash="baa838bcf579f71dbcd5ef2ab9ca8f2b"
 )
 
-START_MESSAGE = """
-Hello {}
-"""
-
-@Bot.on_message(filters.command("start"))
-async def start_message(bot, message):
-
-
-    await message.reply_photo(
-        photo="https://telegra.ph/file/5febb89f64baf2c08cc6d.jpg",
-        caption=START_MESSAGE.format(message.from_user.mention)
-        reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("Group", url="https://t.me/New_Mallu_Movies_2"),
-            InlineKeyboardButton("Channel", url="https://t.me/+GV8HnJAzx_hhNmE1")
-            ],[
-            InlineKeyboardButton("Help", url="https://t.me/Shanib_c_k")
-            ]]
-            )
-        )
+START_MESSAGE = "Lets start the bot"
+START_BUTTON = [
+  [
+    InlineKeyboardButton('start', callback_data="start")
+  ]
+]
 
 
-@Bot.on_message(filters.command("help"))
-async def help(bot: Bot, message: Message):
-    await message.reply_text("help✅")
 
+@Bot.on_message(filters.command("start") & filters.private)
+def start(Bot, Message):
+  Message.reply(
+        text=START_MESSAGE,
+reply_markup=InlineKeyboardMarkup(START_BUTTON)
+                  )
+
+@Bot.on_callback_query()
+def callback_query(Client, CallbackQuery):
+  if CallbackQuery.data == "start":
+
+    PAGE1_TEXT = "How are you ?"
+    PAGE1_BUTTON = [[
+InlineKeyboardButton("BACK TO MENU",callback_data="GO TO MENU")
+]]
+    
+  CallbackQuery.edit_message_text(
+      PAGE1_TEXT,
+      reply_markup=InlineKeyboardMarkup(PAGE1_BUTTON))
+    
+    elif CallbackQuery.data == "GO TO MENU":
+       CallbackQuery.edit_message_text(
+       START_MESSAGE,  
+       reply_markup=InlineKeyboardMarkup(START_BUTTON)
+    )
+  
 
 print("Bot_Started")
 
